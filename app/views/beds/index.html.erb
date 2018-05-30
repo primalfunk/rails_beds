@@ -1,0 +1,13 @@
+<h1>List of All Beds</h1>
+<br />
+<p> <% @beds.each do |bed| %>
+  <strong>Title:</strong> <%= bed.title %>
+  <strong>Manufacturer: </strong><%= bed.manu %>
+  <strong>Model: </strong><%= bed.model %>
+  <strong>Price: $</strong><%= bed.price %>
+  <strong>Customer Rating: </strong><%= bed.rating %>
+  <%= link_to 'Show', bed_path(bed) %>
+  <%= link_to 'Edit', edit_bed_path(bed) %>
+  <%= link_to 'Delete', bed, method: :delete %>
+</p>
+<% end %>
